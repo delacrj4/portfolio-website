@@ -1,0 +1,79 @@
+:host {
+    display: grid;
+    grid-template-columns: 16rem minmax(0, 1fr);
+    min-height: 100dvh;
+}
+
+aside {
+    padding: 1.5rem;
+    background-color: #4169E1;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav a,
+.menu-toggle {
+  color: #E5E7EB;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+nav a.active,
+.menu-toggle  {
+    background-color: #304FA8;
+    font-weight: 600;
+}
+
+nav a:hover,
+.menu-toggle:hover {
+    background-color: #243a7a;
+}
+
+nav a:focus-visible ,
+.menu-toggle:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+main {
+    padding: 2rem;
+    min-width: 0;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: left;
+    width: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 48rem) {
+  :host {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    aside{
+        padding: 1rem;
+    }
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+  nav {
+    display: none;
+  }
+  nav.open {
+    display: flex;
+  }
+
+}
+
