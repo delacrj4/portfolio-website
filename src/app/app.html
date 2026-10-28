@@ -7,8 +7,11 @@
     <a routerLink="/skills" routerLinkActive="active" ariaCurrentWhenActive="page">Skills</a>
     <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Me</a>
   </nav>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/julian-de-la-cruz-2a5662160" target="_blank" rel="noopener noreferrer"><img ngSrc="icons/InBug-White.png" alt="LinkedIn" width="38" height="38"></a>
+    <a href="https://github.com/delacrj4" target="_blank" rel="noopener noreferrer"><img ngSrc="icons/GitHub_Invertocat_White.svg" alt="GitHub" width="38" height="38"></a>
+  </div>
 </aside>
-
 <main>
   <router-outlet #pageOutlet="outlet" (activate)="onPageActivated(pageOutlet)" />
 </main>
